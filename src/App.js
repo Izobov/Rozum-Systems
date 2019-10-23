@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import MapContainer from './components/Map/MapContainer';
+import Cards from './components/Cards/Cards';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <div className="map_wrapper">
         <MapContainer
           isMarkerShown
-          defaultZoom={18}
+          defaultZoom={11}
           defaultCenter={{ lat: 53.93604672, lng: 27.48154342 }}
           googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
@@ -16,7 +17,9 @@ function App() {
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>
-      <div className="cards"></div>
+
+      <Cards className="cards" />
+
 
     </div>
   );
