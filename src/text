@@ -1,0 +1,9 @@
+AIzaSyDOTh4X-qiZf4hNIvUhTeR63EHWrdp218Q
+
+isMarkerShown
+          defaultZoom={11}
+          defaultCenter={{ lat: 53.90352909, lng: 27.55783081 }}
+          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `100%` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
