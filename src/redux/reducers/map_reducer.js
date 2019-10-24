@@ -4,8 +4,7 @@ const InitialState = {
         lat: 53.90208159,
         lng: 27.5622189
     },
-
-    zoom: 11
+    defaultZoom: 11
 }
 
 const map_reducer = (state = InitialState, action) => {

@@ -1,14 +1,14 @@
 import React from 'react';
-import Card from './Card';
+import Card from './card/Card';
+
 
 
 const Cards = (props) => {
-    let cardsElement = props.cards
+    let cardsElement = props.coords
         .map(element => <Card name={element.name} coords={element.coords} />)
 
     return <div>
-        <h2>Минск</h2>
-        <div>Координаты</div>
+        {cardsElement}
 
     </div>
 }

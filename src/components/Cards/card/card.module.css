@@ -1,0 +1,16 @@
+.cardWrapper {
+    padding: 5%;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.cardWrapper:last-child {
+    border-bottom: 2px solid grey;
+}
+
+.cardWrapper:hover {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+

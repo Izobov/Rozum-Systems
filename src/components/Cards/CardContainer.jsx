@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { compose } from 'redux';
 import Cards from './Cards';
+import { setCoordinats } from '../../redux/reducers/cards_reducer';
 
 
 
-class CardContainer extends React.Component {
+
+class CardsContainer extends React.Component {
     componentDidMount() {
-
+        this.props.setCoordinats()
 
     };
 
@@ -15,13 +16,14 @@ class CardContainer extends React.Component {
     }
 
     render() {
-        return <Cards />
+        return <Cards {...this.props} />
     }
 }
 
 let mapStateToProps = (state) => ({
-
+    coords: state.cards.coords,
 });
 
-export default CardContainer;
+
+export default connect(mapStateToProps, { setCoordinats })(CardsContainer);
 

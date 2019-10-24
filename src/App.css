@@ -11,7 +11,6 @@
 
 .map_wrapper {
   width: 100%;
-  background-color: green;
   grid-area: "map";
   height: 100vh;
 }
@@ -22,7 +21,6 @@
 }
 .cards {
   width: 100%;
-  background-color: red;
   grid-area: "cards";
   height: 100vh;
 }
