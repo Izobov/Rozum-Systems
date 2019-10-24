@@ -1,14 +1,23 @@
 import React from 'react';
-import Card from './card/Card';
+import s from './card.module.css';
 
 
 
 const Cards = (props) => {
-    let cardsElement = props.coords
-        .map(element => <Card name={element.name} coords={element.coords} />)
+    // let cardsElement = props.coords
+    //     .map(element => <Card name={element.name} coords={element.coords} setMarkerPosition={props.setMarkerPosition} />)
 
     return <div>
-        {cardsElement}
+        {
+            props.coords
+                .map(element =>
+                    <div className={s.cardWrapper} onClick={() => { props.SetMarkerPosition(element.coords) }}>
+                        <h2>{element.name}</h2>
+                        <div>Координаты: <div>широта:  {element.coords.lat}</div>
+                            <div>долгота: {element.coords.lng}</div></div>
+
+                    </div>)
+        }
 
     </div>
 }

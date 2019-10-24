@@ -3,7 +3,7 @@ import { CardsAPI } from "../../api/api";
 const SET_COORDINATS = 'SET_COORDINATS';
 
 const InitialState = {
-    coords: [
+    Cardscoords: [
     ]
 }
 
@@ -12,7 +12,7 @@ const cards_reducer = (state = InitialState, action) => {
         case SET_COORDINATS:
             return {
                 ...state,
-                coords: action.coords
+                Cardscoords: action.coords
             }
         default: return state
     }
@@ -21,7 +21,7 @@ const cards_reducer = (state = InitialState, action) => {
 
 const Coords = (coords) => ({ type: SET_COORDINATS, coords })
 
-export const setCoordinats = () => {
+export const setCards = () => {
     return (dispatch) => {
         let response = CardsAPI.getCards()
         dispatch(Coords(response))
