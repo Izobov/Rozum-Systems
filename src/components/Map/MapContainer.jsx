@@ -27,7 +27,9 @@ let mapStateToProps = (state) => ({
     zoom: state.map.zoom,
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDQUk3fIGUDtRFnOMFVipKS2yYPZKZfHp4&v=3.exp&libraries=geometry,drawing,places",
     isMarkerShown: state.map.isMarkerShown,
-    markerPosition: state.map.markerPosition
+    markerPosition: state.map.markerPosition,
+    center: state.map.center
+
 
 })
 export default connect(mapStateToProps)(MapContiner)

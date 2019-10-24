@@ -8,10 +8,14 @@ const InitialState = {
         lng: 27.5622189
     },
     defaultZoom: 11,
-
     isMarkerShown: false,
     markerPosition: null,
-    zoom: null,
+    zoom: 11,
+    center: {
+        lat: 53.90208159,
+        lng: 27.5622189
+    }
+
 }
 
 const map_reducer = (state = InitialState, action) => {
@@ -22,7 +26,9 @@ const map_reducer = (state = InitialState, action) => {
                 ...state,
                 isMarkerShown: true,
                 markerPosition: action.coords,
-                zoom: 18
+                zoom: 16,
+                center: action.coords
+
             }
 
         default: return state
