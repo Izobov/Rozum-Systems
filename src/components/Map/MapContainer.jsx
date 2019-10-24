@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import Map from './Map';
 
 
+
+
 class MapContiner extends React.Component {
     componentDidMount() { };
-    componentDidUpdate() {
-        console.log('update')
 
-    };
 
     render() {
+        console.log('render')
         return (
             <Map {...this.props}
                 loadingElement={<div style={{ height: `100%` }} />}
@@ -26,12 +26,8 @@ let mapStateToProps = (state) => ({
     defaultZoom: state.map.defaultZoom,
     zoom: state.map.zoom,
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDQUk3fIGUDtRFnOMFVipKS2yYPZKZfHp4&v=3.exp&libraries=geometry,drawing,places",
-    // loadingElement: {< div style={{ height: `100%` }} />},
-    // containerElement: { <div style={{ height: `100%` }} /> },
-    // mapElement: { <div style={{ height: `100%` }} /> },
     isMarkerShown: state.map.isMarkerShown,
     markerPosition: state.map.markerPosition
 
 })
-
 export default connect(mapStateToProps)(MapContiner)

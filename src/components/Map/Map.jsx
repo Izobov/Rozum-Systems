@@ -6,12 +6,14 @@ import { GoogleMap, withGoogleMap, withScriptjs, Marker } from 'react-google-map
 
 
 
+
 const Map = withScriptjs(withGoogleMap(
     (props) => {
-
-        return <GoogleMap defaultZoom={props.zoom || props.defaultZoom} defaultCenter={props.defaultCenter} >
-            {props.isMarkerShown && < Marker position={props.markerPosition} />}
-        </GoogleMap>
+        return (
+            <GoogleMap defaultZoom={props.defaultZoom} defaultCenter={props.defaultCenter} >
+                < Marker position={props.markerPosition} noRedraw={true} />
+            </GoogleMap >
+        )
     }
 ))
 

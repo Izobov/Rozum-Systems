@@ -1,5 +1,6 @@
 const SET_MARKER_POSITION = 'SET_MARKER_POSITION';
 
+
 const InitialState = {
     name: "Минск",
     coords: {
@@ -9,8 +10,7 @@ const InitialState = {
     defaultZoom: 11,
 
     isMarkerShown: false,
-    markerPosition: {
-    },
+    markerPosition: null,
     zoom: null,
 }
 
@@ -20,10 +20,9 @@ const map_reducer = (state = InitialState, action) => {
 
             return {
                 ...state,
-                coords: action.coords,
-                zoom: 18,
                 isMarkerShown: true,
-                markerPosition: action.coords
+                markerPosition: action.coords,
+                zoom: 18
             }
 
         default: return state
@@ -32,6 +31,7 @@ const map_reducer = (state = InitialState, action) => {
 }
 
 export const SetMarkerPosition = (coords) => ({ type: SET_MARKER_POSITION, coords });
+
 
 export default map_reducer;
 

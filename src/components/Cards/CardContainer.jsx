@@ -9,12 +9,15 @@ import { SetMarkerPosition } from '../../redux/reducers/map_reducer';
 
 class CardsContainer extends React.Component {
     componentDidMount() {
-        this.props.setCards()
+        setInterval(() => this.props.setCards(), 3000)
+
 
     };
-
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate() {
+        setInterval(() => this.props.setCards(), 3000)
     }
+
+
 
     render() {
         return <Cards {...this.props} />
