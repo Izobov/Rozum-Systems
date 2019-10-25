@@ -2,11 +2,18 @@ import React from 'react';
 import './App.css';
 import CardsContainer from './components/Cards/CardContainer';
 import MapContainer from './components/Map/MapContainer';
-import { Route } from 'react-router-dom'
+import { connect } from 'react-redux';
+import LoginContainer from './components/Login/LoginContainer';
 
-function App() {
+function App(props) {
+
+  if (!props.isAuth) {
+    return <LoginContainer />
+  }
+
   return (
     <div className="app_wrapper">
+
       <div className="map_wrapper">
         <MapContainer
         />
@@ -15,10 +22,14 @@ function App() {
 
         <CardsContainer />
       </div>
-      <Route path='/login' render={() => <CardsContainer />} />
 
     </div>
   );
 }
 
-export default App;
+let mapStateToProps = (state) => ({
+  isAuth: state.auth.isAuth
+
+})
+
+export default connect(mapStateToProps)(App);
