@@ -1,0 +1,18 @@
+.formControl.error input {
+    color: red;
+}
+
+.formControl span {
+    color: red;
+}
+
+.formSummaryError {
+    color: red
+}
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

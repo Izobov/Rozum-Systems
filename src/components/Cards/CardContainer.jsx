@@ -13,13 +13,15 @@ class CardsContainer extends React.Component {
 
 
     };
-    componentDidUpdate() {
+    componentWillUpdate() {
         setInterval(() => this.props.setCards(), 3000)
+        setInterval(() => console.log("didUpdate"), 3000)
     }
 
 
 
     render() {
+        console.log("RenderCards")
         return <Cards {...this.props} />
     }
 }
