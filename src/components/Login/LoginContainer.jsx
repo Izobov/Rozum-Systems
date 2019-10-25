@@ -8,7 +8,7 @@ const LoginContainer = (props) => {
 
     const onSubmit = (formData) => {
 
-        props.loginThunk(formData.email, formData.password, formData.rememberMe);
+
     }
 
     return <div className={s.formWrapper}>
@@ -21,8 +21,7 @@ const LoginContainer = (props) => {
 },
 
     mapStateToProps = (state) => ({
-        isAuth: state.auth.isAuth,
-        id: state.auth.id,
+
     })
 
 
